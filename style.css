@@ -1,0 +1,255 @@
+:root {
+    --header-font: "Baskerville", serif;
+    --body-font: "Helvetica", sans-serif;
+    --jupiterbyrd-orange: #dd7825;
+    --light: #457865;
+    --dark: rgb(0, 0, 0);
+    --gold: rgb(156, 125, 25);
+    --background: #f4feff;
+    --copper: rgb(150, 135, 123);
+    --tea-green: rgb(96, 102, 76);
+    --sage: #cecc97ff;
+    --dim-gray: rgb(81, 81, 108);
+    --paynes-gray: rgb(172, 213, 231);
+    --paynes-gray-2: rgb(72, 88, 78);
+    --air-force-blue: #628492ff;
+    --slate-gray: #648390ff;
+    --air-force-blue-2: rgb(94, 153, 179);
+    --cadet-gray: rgb(59, 49, 63);
+
+}
+body {
+    background-color: var(--jupiterbyrd-orange);
+   
+    background-size: 120%;
+    background-position-y: 400px;
+    background-repeat: no-repeat;
+    /*backdrop-filter: invert(100%);*/
+    font-family: var(--body-font);
+   
+    color: var(--background);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 5vh 5vw;
+    height: 90vh;
+    width:  90vw;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-radius: 15px;
+    
+    
+}
+p {
+    margin: auto;
+    padding: 0;
+}
+h1 {
+
+    text-align: center;
+    font-size:50px;
+    text-transform: lowercase;
+    font-family: var(--header-font);
+    letter-spacing: -2px;
+    font-weight: 100;
+    color: var(--background);
+    padding: 0;
+    margin:0;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+h2 {
+  margin-left: auto;
+    margin-right: auto;
+  text-align: center;
+  width: 100%;
+    font-size:20px;
+    text-transform: uppercase;
+    font-weight: 100;
+    width: fit-content;
+    color: var(--background);
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.backImage {
+    pointer-events:none; 
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    
+    overflow-y: hidden;
+}
+img#grainFilter {
+    height: 100vh;
+    opacity: 0.09;
+
+}
+img#drawing {
+  
+    z-index: -100;
+  -webkit-filter: invert(95%);
+  -moz-filter: invert(95%);
+  -o-filter: invert(95%);
+  -ms-filter: invert(95%);
+  filter: invert(95%);
+}
+
+textarea#prompt {
+  display: block;
+  background-color: transparent;
+  border: var(--background) solid 1px;
+  border-left: none;
+  border-right: none;
+  resize:none;
+  color: var(--background);
+  font-family: var(--body-font);
+  padding-top: auto;
+  padding-bottom: auto;
+  padding:10px;
+  margin:15px auto;
+  width: 100%;
+  border-radius: 0;
+  height: 200px;
+  white-space: normal;
+  text-align: center;
+  -moz-text-align-last: center; /* Firefox 12+ */
+  text-align-last: center;
+  box-sizing:content-box;
+
+}
+
+
+
+button {
+    display: block;
+    padding: 15px;
+    font-size: medium;
+    font-family: var(--body-font);
+    background-color: transparent ;
+    color: var(--background);
+    border: 1px solid var(--background);
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+}
+button:hover {
+    cursor: pointer;
+}
+
+.parameter {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    height: 50px;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    
+}
+ 
+
+
+main#centre-stage {
+    border: none;
+}
+
+div.cell-container {
+  
+}
+aside {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+/*HIDING SCROLLBAR*/
+/* Hide scrollbar for Chrome, Safari and Opera */
+aside::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+aside {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+aside iframe {
+  border-radius:0px;
+  width:100%;
+  height: 500px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+.slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background: url('star.png');
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background: url('star.png');
+    background-size: cover;
+    cursor: pointer;
+  }
+canvas.spiroquadCanvas {
+
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-size: cover;
+    background-image: none;
+  }
+  svg {
+    padding-bottom: 15px;
+  }
+  img#grainFilter {
+    visibility: hidden;
+  }
+  
+}
+
